@@ -1,7 +1,7 @@
-### <h1 align="center"> Welcome to Digital Library:) </h1>
+### <h1 align="center"> Welcome to Digital Library :) </h1>
 <p align="center">
 •●•
-<h1 align="center">I'm NF_Ramz 乂 revvskibidi<img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="40"></h1>
+<h1 align="center">NF_Ramz 乂 revvskibidi<img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="40"></h1>
 <p align="center"
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&duration=1500&pause=500&color=00D9F7&background=FF00BE00&center=true&vCenter=true&width=435&lines=Semester+3;Ujian+Akhir+Praktikum;Pemograman+Lanjut" alt="Typing SVG" /></a>
 </p>
