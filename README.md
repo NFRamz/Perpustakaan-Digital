@@ -1,7 +1,7 @@
 ### <h1 align="center"> Welcome to Digital Library:) </h1>
 <p align="center">
 •●•
-<h1 align="center">I'm NF_Ramz <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="40"></h1>
+<h1 align="center">I'm NF_Ramz 乂 revvskibidi<img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="40"></h1>
 <p align="center"
   <a href="https://github.com/NFRamz"><img src="https://readme-typing-svg.herokuapp.com?lines=Universitas+Muhammadiyah+Malang;Fakultas+Teknik;Informatika;Pemograman+Berorientasi+Objek;Semester+2;&center=true&width=500&height=50"></a>
 </p>
