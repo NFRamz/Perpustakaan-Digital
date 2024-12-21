@@ -8,8 +8,8 @@ public class LoginMenu {
     private JFrame frame;
     private JTextField usernameField = new JTextField();
     private JPasswordField passwordField = new JPasswordField();
-    public JLabel errorLabel = new JLabel("");
-    public Dotenv dotenv = Dotenv.configure().load();
+    private JLabel errorLabel = new JLabel("");
+    private Dotenv dotenv = Dotenv.configure().load();
     String adminUsername = dotenv.get("ADMIN_USERNAME");
     String adminPassword = dotenv.get("ADMIN_PASSWORD");
     String studentUsername = dotenv.get("STUDENT_USERNAME");
@@ -109,10 +109,12 @@ public class LoginMenu {
         button.setFont(new Font("Arial", Font.BOLD, 14));
     }
 
-    public void handleLogin(ActionEvent e) {
+    void handleLogin(ActionEvent e) {
         try {
             String username = usernameField.getText();
             String password = new String(passwordField.getPassword());
+
+            errorLabel.setText("");
 
             if (username.isEmpty() || password.isEmpty()) {
                 throw new IllegalArgumentException("Username or Password cannot be empty!");
@@ -136,11 +138,16 @@ public class LoginMenu {
             errorLabel.setText("An unexpected error occurred. Please try again.");
         }
     }
-    public String getUsername() {
-        return usernameField.getText();
+    // Getter Methods for Unit Testing
+    public JTextField getUsernameField() {
+        return usernameField;
     }
 
-    public String getPassword() {
-        return new String(passwordField.getPassword());
+    public JPasswordField getPasswordField() {
+        return passwordField;
+    }
+
+    public JLabel getErrorLabel() {
+        return errorLabel;
     }
 }

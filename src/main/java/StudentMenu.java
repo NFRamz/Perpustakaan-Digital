@@ -5,14 +5,22 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class StudentMenu {
+    private BookDatabase bookDatabase;
+
+    public StudentMenu(){}
+    public StudentMenu(BookDatabase bookDatabase) {
+        this.bookDatabase = bookDatabase;
+    }
     private JFrame frame;
     private JPanel panel;
     private JPanel booksPanel;
 
+
     public void menu() {
+
         // Frame utama
         frame = new JFrame("Student Menu");
-        frame.setSize(800, 500);
+        frame.setSize(650, 500);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);  // Menempatkan frame di tengah layar
 

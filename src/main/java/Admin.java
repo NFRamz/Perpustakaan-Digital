@@ -9,8 +9,9 @@ public class Admin {
     private JFrame frame;
     private JTextField titleText, authorText, categoryText, quantityText;
     private JLabel imageLabel;
-    private JTable bookTable;
-    private DefaultTableModel tableModel;
+    public JTable bookTable;
+    public DefaultTableModel tableModel;
+
     private File selectedImageFile;
 
     // ==== Elemen-elemen UI ====
@@ -29,21 +30,22 @@ public class Admin {
         imageLabel.setText("No Image Selected");
     }
 
-    private void loadBooks() {
+    public void loadBooks() {
         tableModel.setRowCount(0);
         for (Book book : BookDatabase.getAvailableBooks()) {
             tableModel.addRow(new Object[]{book.getId(), book.getTitle(), book.getAuthor(), book.getCategory(), book.getQuantity()});
         }
     }
 
-    private void dummy() {
-        BookDatabase.addBook(1, "Java Programming", "Dr. Muneer Ahmad Dar", "Programming", 5, "D:\\TUGAS KULIAH\\SEMESTER 3\\Pemograman Lanjut\\library_javaSwing\\src\\Image\\Cover1.jpg");
-        BookDatabase.addBook(2, "Python Essentials", "Beazley, David", "Programming", 3, "D:\\TUGAS KULIAH\\SEMESTER 3\\Pemograman Lanjut\\library_javaSwing\\src\\Image\\cover2.jpg");
-        BookDatabase.addBook(3, "C++ Guide", "Erik Myers", "Programming", 4, "D:\\TUGAS KULIAH\\SEMESTER 3\\Pemograman Lanjut\\library_javaSwing\\src\\Image\\cover3.jpg");
+    public void dummy() {
+        BookDatabase.addBook(1, "Java Programming", "Dr. Muneer Ahmad Dar", "Programming", 5, "D:\\TUGAS KULIAH\\SEMESTER 3\\Pemograman Lanjut\\library_javaSwing\\src\\main\\java\\Image\\Cover1.jpg");
+        BookDatabase.addBook(2, "Python Essentials", "Beazley, David", "Programming", 3, "D:\\TUGAS KULIAH\\SEMESTER 3\\Pemograman Lanjut\\library_javaSwing\\src\\main\\java\\Image\\cover2.jpg");
+        BookDatabase.addBook(3, "C++ Guide", "Erik Myers", "Programming", 4, "D:\\TUGAS KULIAH\\SEMESTER 3\\Pemograman Lanjut\\library_javaSwing\\src\\main\\java\\Image\\cover3.jpg");
+        BookDatabase.addBook(4, "Modern Art", "Erick", "Design", 2, "D:\\TUGAS KULIAH\\SEMESTER 3\\Pemograman Lanjut\\library_javaSwing\\src\\main\\java\\Image\\Cover4.jpg");
     }
 
     // ==== Aksi Tombol ====
-    private void addBookAction(ActionEvent e) {
+    public void addBookAction(ActionEvent e) {
         try {
             String title = titleText.getText();
             String author = authorText.getText();
@@ -64,7 +66,7 @@ public class Admin {
         }
     }
 
-    private void updateBookAction(ActionEvent e) {
+    public void updateBookAction(ActionEvent e) {
         int selectedRow = bookTable.getSelectedRow();
         if (selectedRow == -1) {
             JOptionPane.showMessageDialog(frame, "Please select a book to update.");
@@ -93,7 +95,7 @@ public class Admin {
         }
     }
 
-    private void deleteBookAction(ActionEvent e) {
+    public void deleteBookAction(ActionEvent e) {
         int selectedRow = bookTable.getSelectedRow();
         if (selectedRow == -1) {
             JOptionPane.showMessageDialog(frame, "Please select a book to delete.");
@@ -239,4 +241,6 @@ public class Admin {
         frame.add(mainPanel);
         frame.setVisible(true);
     }
+
+
 }

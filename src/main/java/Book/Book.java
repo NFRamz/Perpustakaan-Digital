@@ -17,7 +17,7 @@ public class Book {
         this.category = category;
         this.totalQuantity = quantity;
         this.quantity = quantity;
-        this.coverImagePath = (coverImagePath != null) ? coverImagePath : ""; // Pastikan tidak null
+        this.coverImagePath = coverImagePath; // Pastikan tidak null
     }
 
     // Constructor lama untuk kompatibilitas
